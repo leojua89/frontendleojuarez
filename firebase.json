@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/proyecto-final-lj",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
