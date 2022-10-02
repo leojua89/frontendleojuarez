@@ -7,7 +7,8 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = ' https://backendljuarez.herokuapp.com/educacion/';
+  URL = 'https://backendljuarez.herokuapp.com/educacion/'; 
+
 
   constructor(private httpClient : HttpClient) { }
 

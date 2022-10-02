@@ -1,5 +1,53 @@
-img{
-    width: 100%;
+/*img{
+    width: 100 px;
     height: 400px;
-    margin: 0em;
+    margin: 0 px;
+}*/
+head, body{
+background-color: black;
+}
+
+@media(max-width:575px){
+
+   .geeks {
+        width: 70%;
+        height: 400px;
+        margin: 0 auto;
+        margin-block: 10px;
+        margin-top: -6.5%;
+      
+    }
+       
+    .geeks img {
+        border-radius: 500px;
+        width: 100%;
+        transition: 0.5s all ease-in-out;
+        margin: 0%;
+    }
+       
+    .geeks:hover img {
+        transform: scale(1.5);
+        
+    }
+}
+@media(min-width:576px){
+    .geeks {
+        width: 30%;
+        height: 400px;
+        margin: 0 auto;
+        margin-block: 10px;
+      
+    }
+       
+    .geeks img {
+        border-radius: 500px;
+        width: 100%;
+        transition: 0.5s all ease-in-out;
+        margin: 0%;
+    }
+       
+    .geeks:hover img {
+        transform: scale(1.5);
+        
+    }
 }

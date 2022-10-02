@@ -1,4 +1,14 @@
 .row{
-    background-color: #a1b5cb;
     padding: 20px;
+}
+div{
+    background-color: #000000;
+  
+}
+h1,h3{
+    display: inline;
+    color: rgb(179, 206, 206);
+}
+h2{
+    font-size: 25px;
 }

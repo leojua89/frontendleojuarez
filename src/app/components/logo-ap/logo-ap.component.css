@@ -5,30 +5,72 @@
 }
 .redes{
     margin-right: 0.5em;
+    margin-block: 50px;
+}
+div{
+    background-color: #000000;
+
 }
 
 #logoAP{
+    margin-left: 50px;
     width: 150px;
+    
+    
 }
+#logoAP:hover {
+    box-shadow: 0 0 10px 0 #165412 inset, 0 0 10px 4px #165412;
+    border-radius: 100%;
+  }
 img{
     width: 50px;
 }
+
+img:hover {
+    box-shadow: 0 0 10px 0 #165412 inset, 0 0 10px 4px #165412;
+    border-radius: 100%;
+    transform: scale(1.5);
+  }
+
 .btn{
+    
+        border-color: #165412;
+        color: #fff;
+        box-shadow: 0 0 40px 40px black inset, 0 0 0 0 #165412;
+        -webkit-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      
+    
     border-width: medium;
+    z-index: 1;
 }
-/*---vista celu---*/
+
+.btn:hover {
+    box-shadow: 0 0 10px 0 #165412 inset, 0 0 10px 4px #165412;
+  }
 @media (max-width: 575px) {
     .contenedor{
         flex-direction: column;
+       
     }
     .redes{
         display: flex;
-        flex-direction: column;
+        flex-direction: initial;
         align-items: center;
+        z-index: 2;
     }
     .redes img{
         margin: 0.5em;
+    
     }
+    #logoAP{
+        margin-top: 50px;
+        width: 150px;
+        
+        
+    }
+
 }
     
 

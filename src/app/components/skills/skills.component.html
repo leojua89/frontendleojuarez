@@ -1,136 +1,38 @@
 <div class="row">
-    <h1>Hard & Soft Skills</h1>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-     <circle-progress
-        [percent]="85"
-        [title]="'HTML'"
-        [showUnits]="false"
-        [imageSrc]="'../assets/html.png'"
-        [showImage]="true"
-        [imageHeight]="75"
-        [imageWidth]="75"
-        [titleColor]="'blue'"
-        [titleFontSize]="'3em'"
-        [showSubtitle]="false"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="300"
-        >
-     </circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-           [percent]="85"
-           [title]="'CSS'"
-           [showUnits]="false"
-           [imageSrc]="'../assets/CSS.png'"
-           [showImage]="true"
-           [imageHeight]="75"
-           [imageWidth]="75"
-           [titleColor]="'blue'"
-           [titleFontSize]="'3em'"
-           [showSubtitle]="false"
-           [radius]="100"
-           [outerStrokeWidth]="16"
-           [innerStrokeWidth]="8"
-           [outerStrokeColor]="'#78C000'"
-           [innerStrokeColor]="'#C7E596'"
-           [animation]="true"
-           [animationDuration]="300"
-           >
-        </circle-progress>
-       </div>
-       <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-           [percent]="85"
-           [title]="'GIT'"
-           [showUnits]="false"
-           [imageSrc]="'../assets/git.png'"
-           [showImage]="true"
-           [imageHeight]="75"
-           [imageWidth]="75"
-           [titleColor]="'blue'"
-           [titleFontSize]="'3em'"
-           [showSubtitle]="false"
-           [radius]="100"
-           [outerStrokeWidth]="16"
-           [innerStrokeWidth]="8"
-           [outerStrokeColor]="'#78C000'"
-           [innerStrokeColor]="'#C7E596'"
-           [animation]="true"
-           [animationDuration]="300"
-           >
-        </circle-progress>
-       </div>
-       <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-           [percent]="85"
-           [title]="'Javascript'"
-           [showUnits]="false"
-           [imageSrc]="'../assets/js.png'"
-           [showImage]="true"
-           [imageHeight]="75"
-           [imageWidth]="75"
-           [titleColor]="'blue'"
-           [titleFontSize]="'3em'"
-           [showSubtitle]="false"
-           [radius]="100"
-           [outerStrokeWidth]="16"
-           [innerStrokeWidth]="8"
-           [outerStrokeColor]="'#78C000'"
-           [innerStrokeColor]="'#C7E596'"
-           [animation]="true"
-           [animationDuration]="300"
-           >
-        </circle-progress>
-       </div>
-       <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-           [percent]="85"
-           [title]="'Idioma'"
-           [showUnits]="false"
-           [imageSrc]="'../assets/eng.png'"
-           [showImage]="true"
-           [imageHeight]="75"
-           [imageWidth]="75"
-           [titleColor]="'blue'"
-           [titleFontSize]="'3em'"
-           [showSubtitle]="false"
-           [radius]="100"
-           [outerStrokeWidth]="16"
-           [innerStrokeWidth]="8"
-           [outerStrokeColor]="'#78C000'"
-           [innerStrokeColor]="'#C7E596'"
-           [animation]="true"
-           [animationDuration]="300"
-           >
-        </circle-progress>
-       </div>
-       <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-           [percent]="85"
-           [title]="'Comunicacion'"
-           [showUnits]="false"
-           [imageSrc]="'../assets/grupal.png'"
-           [showImage]="true"
-           [imageHeight]="75"
-           [imageWidth]="75"
-           [titleColor]="'blue'"
-           [titleFontSize]="'3em'"
-           [showSubtitle]="false"
-           [radius]="100"
-           [outerStrokeWidth]="16"
-           [innerStrokeWidth]="8"
-           [outerStrokeColor]="'#78C000'"
-           [innerStrokeColor]="'#C7E596'"
-           [animation]="true"
-           [animationDuration]="300"
-           >
-        </circle-progress>
-       </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lo-12" id="alineado">
+          <h1>Hard & Soft Skills</h1>
+          <div>
+            <button type="button" style="color: #165412" class="btn btn-outline-ligth" routerLink="/nuevaskills" *ngIf="isLogged">
+              Nueva Skill
+            </button>
+          </div>
+        </div>    
+        <div *ngFor= "let Skills of skills" class="text-center col-sm-4 col-md-4 col-lg-3">            
+          <circle-progress
+            [percent]="Skills.descripcionS"
+            [radius]="60"
+            [showUnits]="false"
+            [title]="Skills.nombreS"
+            [titleColor]="'rgb(179, 206, 206)'"
+            [showSubtitle]="false"
+            [subtitle]="Skills.nombreS" 
+            [outerStrokeWidth]="7"
+            [innerStrokeWidth]="5"
+            [outerStrokeColor]="'#165412'"
+            [innerStrokeColor]="'#000000'"
+            [animation]="true"
+            [animationDuration]="600"
+          ></circle-progress>
     
+          <div *ngIf="isLogged">
+            <button type="button" style="color: #165412" class="btn btn-outline-ligth" routerLink="/editskills/{{Skills.id}}">
+            <i class="bi bi-pencil-fill"></i></button>
+            <button type="button" style="color: #165412" class="btn btn-outline-ligth" (click)="delete(Skills.id)">
+              <i class="bi bi-trash"></i></button>
+          </div>
+    
+        </div>
+      </div>
+
 </div>
